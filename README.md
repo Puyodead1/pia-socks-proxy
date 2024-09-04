@@ -60,3 +60,4 @@ env ALL_PROXY=socks5h://localhost:1080 git clone https://github.com/some/one.git
 ## Credits
 
 - [OneOfOne/pia-socks-proxy](https://github.com/OneOfOne/pia-socks-proxy/)
+- [orangepeelbeef/pia-proxybox](https://github.com/orangepeelbeef/pia-proxybox)
