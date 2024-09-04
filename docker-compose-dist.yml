@@ -1,0 +1,28 @@
+version: "3"
+services:
+    pia-socks-proxy:
+        build: https://github.com/Puyodead1/pia-socks-proxy.git
+        container_name: pia-socks-proxy
+        image: puyodead1/pia-socks-proxy
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        environment:
+            - REGION=us_chicago
+            - USERNAME=username
+            - PASSWORD=password
+            - PROTOCOL=udp
+            - ENCRYPTION=strong
+        dns:
+            - 1.1.1.1
+            - 1.1.0.0
+        networks:
+            - pia-socks-proxy
+        ports:
+            - 1080:1080
+            - 9009:9009
+        restart: always
+
+networks:
+    pia-socks-proxy:
